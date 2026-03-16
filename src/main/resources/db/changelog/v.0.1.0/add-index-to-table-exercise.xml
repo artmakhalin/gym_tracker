@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    
+    <changeSet id="add-index-to-table-exercise" author="Artem Makhalin">
+
+        <createIndex tableName="exercise" indexName="index_created_by_user_id_active">
+
+            <column name="created_by_user_id"/>
+            <column name="active"/>
+
+        </createIndex>
+
+    </changeSet>
+    
+</databaseChangeLog>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="add-foreign-key-exercise-to-app-user" author="Artem Makhalin">
+
+        <addForeignKeyConstraint
+                baseTableName="exercise"
+                baseColumnNames="created_by_user_id"
+                constraintName="fk_exercise_to_app_user"
+                referencedTableName="app_user"
+                referencedColumnNames="id"/>
+
+    </changeSet>
+
+</databaseChangeLog>

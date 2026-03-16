@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="add-db-tag-v.0.1.0" author="Artem Makhalin">
+        <tagDatabase tag="v.0.1.0"/>
+    </changeSet>
+
+    <include file="create-table-app-user.xml" relativeToChangelogFile="true"/>
+    <include file="create-table-muscle-group.xml" relativeToChangelogFile="true"/>
+    <include file="create-table-confirmation-code.xml" relativeToChangelogFile="true"/>
+    <include file="create-table-exercise.xml" relativeToChangelogFile="true"/>
+    <include file="create-table-exercise-muscle-group.xml" relativeToChangelogFile="true"/>
+    <include file="create-table-training-template.xml" relativeToChangelogFile="true"/>
+    <include file="create-table-template-exercise.xml" relativeToChangelogFile="true"/>
+    <include file="create-table-workout.xml" relativeToChangelogFile="true"/>
+    <include file="create-table-workout-exercise.xml" relativeToChangelogFile="true"/>
+    <include file="create-table-workout-set.xml" relativeToChangelogFile="true"/>
+    <include file="add-primary-key-exercise-muscle-group.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-confirmation-code-to-app-user.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-exercise-muscle-group-to-exercise.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-exercise-muscle-group-to-muscle-group.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-exercise-to-app-user.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-template-exercise-to-exercise.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-template-exercise-to-training-template.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-training-template-to-app-user.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-workout-exercise-to-exercise.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-workout-exercise-to-template-exercise.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-workout-exercise-to-workout.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-workout-set-to-workout-exercise.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-workout-to-app-user.xml" relativeToChangelogFile="true"/>
+    <include file="add-foreign-key-workout-to-training-template.xml" relativeToChangelogFile="true"/>
+    <include file="add-index-to-table-confirmation-code.xml" relativeToChangelogFile="true"/>
+    <include file="add-index-to-table-exercise.xml" relativeToChangelogFile="true"/>
+    <include file="add-indexes-to-table-template-exercise.xml" relativeToChangelogFile="true"/>
+    <include file="add-indexes-to-table-training-template.xml" relativeToChangelogFile="true"/>
+    <include file="add-indexes-to-table-workout.xml" relativeToChangelogFile="true"/>
+    <include file="add-indexes-to-table-workout-exercise.xml" relativeToChangelogFile="true"/>
+    <include file="add-indexes-to-table-workout-set.xml" relativeToChangelogFile="true"/>
+    <include file="add-records-to-table-muscle-group.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

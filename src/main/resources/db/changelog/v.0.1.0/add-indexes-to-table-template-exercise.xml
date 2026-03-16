@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    
+    <changeSet id="add-indexes-to-table-template-exercise" author="Artem Makhalin">
+
+        <createIndex tableName="template_exercise" indexName="index_training_template_id">
+
+            <column name="training_template_id"/>
+
+        </createIndex>
+
+        <createIndex tableName="template_exercise" indexName="index_unique_training_template_id_order_index" unique="true">
+
+            <column name="training_template_id"/>
+            <column name="order_index"/>
+
+        </createIndex>
+
+    </changeSet>
+    
+</databaseChangeLog>
