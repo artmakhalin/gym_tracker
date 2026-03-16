@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="create-table-template-exercise" author="Artem Makhalin">
+
+        <createTable tableName="template_exercise">
+
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="order_index" type="int">
+                <constraints nullable="false" unique="false"/>
+            </column>
+
+            <column name="notes" type="varchar(500)">
+                <constraints nullable="true" unique="false"/>
+            </column>
+
+            <column name="target_sets" type="int">
+                <constraints nullable="true" unique="false" checkConstraint="target_sets > 0"/>
+            </column>
+
+            <column name="target_reps_min" type="int">
+                <constraints nullable="true" unique="false" checkConstraint="target_reps_min > 0"/>
+            </column>
+
+            <column name="target_reps_max" type="int">
+                <constraints nullable="true" unique="false" checkConstraint="target_reps_max > 0 and target_reps_max >= target_reps_min"/>
+            </column>
+
+            <column name="rest_seconds" type="int">
+                <constraints nullable="true" unique="false" checkConstraint="rest_seconds >= 0"/>
+            </column>
+
+            <column name="training_template_id" type="bigint">
+                <constraints nullable="false" unique="false"/>
+            </column>
+
+            <column name="exercise_id" type="bigint">
+                <constraints nullable="false" unique="false"/>
+            </column>
+
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

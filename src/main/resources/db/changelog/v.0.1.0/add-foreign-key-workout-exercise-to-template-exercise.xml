@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="add-foreign-key-workout-exercise-to-template-exercise" author="Artem Makhalin">
+
+        <addForeignKeyConstraint
+                baseTableName="workout_exercise"
+                baseColumnNames="source_template_exercise_id"
+                constraintName="fk_workout_exercise_to_template_exercise"
+                referencedTableName="template_exercise"
+                referencedColumnNames="id" />
+
+    </changeSet>
+
+</databaseChangeLog>
